@@ -23,14 +23,7 @@ failures (touch targets passed on both).
 *(No confirmed fixes yet — see candidates below. This section fills in after the edit pass, with before/after screenshots.)*
 
 ### Candidates (pending fix)
-- **Low-contrast text on solid backgrounds** — WAVE flagged 33 "Very Low
-  Contrast" instances, clustered on the top announcement bar and solid-color
-  nav/footer areas. Documented example: the announcement-bar "Make your bid
-  here" text measured **1.15:1** (WCAG AA requires 4.5:1 for normal text).
-  Because these sit on solid, measurable backgrounds (not images), the fix is
-  darkening the foreground text in Squarespace's style editor. The count of 33
-  is instance-based and likely collapses to ~2–3 actual style changes.
-  *WCAG 1.4.3.* Evidence: `screenshots/homepage-wave-contrast-announcementbar.png`
+- **Low-contrast text — announcement bar** — template-level, recurs site-wide. Documented example measured 1.15:1 (WCAG AA requires 4.5:1). Full write-up, fix path, and evidence in `site-wide-issues.md` (issue 1). *WCAG 1.4.3.*
 
 ---
 
@@ -45,10 +38,7 @@ failures (touch targets passed on both).
   browser status-bar URL preview. *WCAG 2.4.7.*
 - **Illogical focus order** — tab traversal through the hidden submenu items
   does not follow a predictable visual or reading sequence. *WCAG 2.4.3.*
-- **Footer is keyboard-unreachable** — after traversing the embedded video
-  controls, focus bypasses all subsequent content (footer navigation, social
-  links) and returns directly to browser chrome. This is not a keyboard trap
-  (focus escapes), but the footer region is skipped entirely. *WCAG 2.4.3.*
+- **Footer keyboard-unreachable** — template-level, recurs site-wide. After the embedded video controls, focus skips all footer content and returns to browser chrome (not a trap — focus escapes — but the footer is bypassed). Full write-up in `site-wide-issues.md` (issue 2). *WCAG 2.4.3.*
 - **Empty links (6)** — icon links with no discernible name. WAVE found 6;
   Lighthouse named 3: `a#mobile-close-nav.icon-close`,
   `a.sqs-svg-icon--wrapper.pinterest`, `a.icon-info-circle`. Some are
@@ -57,8 +47,7 @@ failures (touch targets passed on both).
 - **Heading order skip** — an `h3` ("THE LORD IS MY SHEPHERD.") appears without
   a preceding `h2`. WAVE also flagged 2 skipped heading levels and 1 possible
   heading. *WCAG 1.3.1.* Squarespace heading structure.
-- **Redundant links (3)** — the same destination is linked in adjacent elements
-  (e.g., logo and text both linking to home). WAVE alert. Minor.
+- **Redundant links (3)** — same destination linked in adjacent elements (e.g., logo and text both to home). WAVE alert, minor. Likely template-level; see `site-wide-issues.md` (issue 3, pending site-wide confirmation).
 - **No skip link** — no "skip to content" link appears on the first Tab press.
   *WCAG 2.4.1.* Low priority: the page is short and single-column, so the impact
   is minimal. Noted for consistency and best practice.
