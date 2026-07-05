@@ -21,8 +21,8 @@ of my broader interest in web accessibility and IT documentation practice.
 
 ## Audit Date & Method
 
-**Date:** June 2026  
-**Browser:** Brave (Chromium-based)  
+**Date:** July 2026  
+**Browser:** Chrome (incognito mode)  
 **Scope:** All 10 publicly navigable pages of littleflowerlambs.com were audited. 
 Pages accessible only via private or direct links were excluded, as they 
 fall outside the standard public user experience.
@@ -36,12 +36,12 @@ fall outside the standard public user experience.
 ---
 
 ## Findings
-
+see findings folder for updates
 ### Fixed
-- 
+- tbd
 
 ### Identified But Not Fixed
-- 
+- tbd
 
 ### Outside Scope
 - Cross-browser and screen reader combination testing was not included in this audit
